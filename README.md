@@ -62,4 +62,4 @@ MIT
 
 ---
 
-**Autor:** luis arthur, jose neto, isadora,
+**Autor:** Luis Arthur, Jose Pereira, Maria Isadora, Antonio Inocencio
