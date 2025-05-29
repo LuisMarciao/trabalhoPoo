@@ -4,54 +4,62 @@ Sistema de gerenciamento de hotel para pets, desenvolvido em Java. Permite cadas
 
 ## Funcionalidades
 
-- **Cadastro de Pets:** Registre informações como nome, espécie, raça, idade, tutor e plano de hospedagem.
-- **Agendamento de Serviços:** Agende serviços como Banho, Tosa e Passeio para os pets hospedados.
-- **Emissão de Faturas:** Gere faturas detalhadas com valores de hospedagem e serviços utilizados.
-- **Relatórios Avançados:** 
-  - Listagem de pets hospedados por espécie, plano ou tempo de permanência.
-  - Relatório mensal com pets atendidos, serviços mais utilizados e receita total por serviço.
+- Cadastro de pets com informações completas.
+- Agendamento de serviços (Banho, Tosa, Passeio).
+- Emissão de faturas detalhadas.
+- Relatórios mensais e listagens por espécie e plano.
 
-## Principais Classes
+## Pré-requisitos
 
-- **Pet:** Representa o animal hospedado.
-- **Tutor:** Representa o responsável pelo pet.
-- **PlanoHospedagem:** Define o plano e a tarifa da hospedagem.
-- **Servico:** Classe base para serviços (Banho, Tosa, Passeio).
-- **ServicoAgendado:** Representa um serviço agendado para um pet.
-- **HotelPet:** Gerencia cadastro de pets, agendamento/cancelamento de serviços e emissão de faturas.
-- **Fatura:** Gera e imprime a fatura da hospedagem e serviços.
-- **RelatorioHotelPet:** Gera relatórios avançados do hotel.
+- Java 11 ou superior
+- (Opcional) Maven ou Gradle para gerenciamento de dependências e build
 
-## Exemplo de Uso
+## Como executar
 
-```java
-HotelPet hotel = new HotelPet();
-Pet pet = new Pet("Rex", "Cachorro", "Labrador", 5);
-hotel.cadastrarPet(pet);
-hotel.agendarServico(pet, new Banho(), LocalDateTime.now().plusHours(1));
-hotel.gerarFatura(pet, LocalDateTime.now().plusDays(2));
-RelatorioHotelPet relatorio = new RelatorioHotelPet(hotel.getPets());
-relatorio.listarHospedadosPorEspecie();
-```
+1. **Clone o repositório:**
+   ```sh
+   git clone <url-do-seu-repositorio>
+   cd pet-hotel-corrigido
+   ```
 
-## Serviços Disponíveis
+2. **Compile o projeto:**
+   - Usando o terminal:
+     ```sh
+     javac -d bin src/main/java/br/com/meuprojeto/*.java
+     ```
+   - Ou use sua IDE favorita (VS Code, IntelliJ, Eclipse).
 
-- **Banho:** 30 minutos, R$30,00
-- **Tosa:** 45 minutos, R$40,00
-- **Passeio:** 60 minutos, R$20,00
+3. **Execute o programa:**
+   - Pelo terminal:
+     ```sh
+     java -cp bin br.com.meuprojeto.App
+     ```
+   - Ou execute a classe `App` pela sua IDE.
 
-## Como Executar
+## Estrutura do Projeto
 
-1. Compile o projeto com Maven, Gradle ou sua IDE Java favorita.
-2. Execute a classe principal (`App.java`).
-3. Utilize o menu interativo para cadastrar pets, agendar serviços, emitir faturas e gerar relatórios.
+- `src/main/java/br/com/meuprojeto/` — Código-fonte principal
+- `src/test/java/br/com/meuprojeto/` — Testes unitários (JUnit)
+- `App.java` — Classe principal com menu interativo
+
+## Como usar
+
+Ao executar, utilize o menu para:
+- Cadastrar pets
+- Agendar serviços
+- Gerar faturas
+- Gerar relatórios mensais
+- Listar pets hospedados por espécie ou plano
 
 ## Testes
 
-Os testes unitários estão localizados em `src/test/java/br/com/meuprojeto/`.  
-Execute-os com JUnit 5.
+Os testes estão em `src/test/java/br/com/meuprojeto/`.  
+Execute com JUnit 5 pela sua IDE ou linha de comando.
+
+## Licença
+
+MIT
 
 ---
 
-**Autor:** Seu Nome  
-**Licença:** MIT
+**Autor:** luis arthur, jose neto, isadora,
